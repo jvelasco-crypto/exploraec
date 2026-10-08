@@ -1,3 +1,5 @@
+// Demo del ciclo de vida: los `print` (initState, build, dispose) son intencionales, por eso se silencia avoid_print.
+// ignore_for_file: avoid_print
 import 'package:flutter/material.dart';
 
 /// Widget de práctica de la Sesión 2 — no forma parte de ExploraEC.

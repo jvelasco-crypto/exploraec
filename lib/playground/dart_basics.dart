@@ -1,3 +1,5 @@
+// Ejercicio de consola: aquí `print` es intencional, por eso se silencia avoid_print.
+// ignore_for_file: avoid_print
 // ExploraEC — Sesión 2: fundamentos de Dart
 // Ejecutar con: dart run lib/playground/dart_basics.dart
 

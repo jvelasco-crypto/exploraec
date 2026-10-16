@@ -55,13 +55,13 @@ class GastosScreen extends GetView<GastosController> {
               }
               // Por qué: pantalla opcional con las licencias de los paquetes que usa la app.
               // TODO(sesion-10) OPCIONAL Paso 10: descomenta la línea de abajo (abrir «Acerca de»).
-              // if (valor == 'acerca') showLicensePage(context: context, applicationName: 'ExploraEC', applicationVersion: '1.0.0');
+              if (valor == 'acerca') showLicensePage(context: context, applicationName: 'ExploraEC', applicationVersion: '1.0.0');
             },
             itemBuilder: (context) => [
               const PopupMenuItem(value: 'password', child: Text('Cambiar contraseña')),
               const PopupMenuItem(value: 'salir', child: Text('Cerrar sesión')),
               // TODO(sesion-10) OPCIONAL Paso 10: descomenta la línea de abajo (opción del menú).
-              // const PopupMenuItem(value: 'acerca', child: Text('Acerca de')),
+              const PopupMenuItem(value: 'acerca', child: Text('Acerca de')),
               if (kDebugMode) ...const [
                 PopupMenuItem(value: 'invalidar', child: Text('Invalidar token (solo práctica)')),
                 PopupMenuItem(value: 'error_pantalla', child: Text('Error de pantalla (solo práctica)')),
@@ -94,8 +94,7 @@ class GastosScreen extends GetView<GastosController> {
             if (controller.desdeCache.value)
               MaterialBanner(
                 leading: const Icon(Icons.cloud_off),
-                content: Text(
-                    'Sin conexión — gastos guardados (última sincronización: ${controller.ultimaSincronizacion})'),
+                content: Text('Sin conexión — gastos guardados (última sincronización: ${controller.ultimaSincronizacion})'),
                 actions: [
                   TextButton(
                     onPressed: controller.cargarGastos,
@@ -103,6 +102,7 @@ class GastosScreen extends GetView<GastosController> {
                   ),
                 ],
               ),
+            // Por qué: los chips van encima de la lista y esta muestra solo `gastosFiltrados`.
             _buildFiltro(),
             Expanded(
               child: RefreshIndicator(

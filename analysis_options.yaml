@@ -38,3 +38,8 @@ linter:
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+
+# Ancho de línea del formateador: el código del curso usa líneas largas (hasta ~160).
+# Con el ancho por defecto (80), `dart format` parte los `if` de una línea y el análisis los marca.
+formatter:
+  page_width: 160

@@ -40,5 +40,5 @@ Los dos deben terminar sin errores. Si fallan, corrige el código; no desactives
 
 <!-- Paso 6 de la práctica: escribe aquí dos reglas propias para ESTE proyecto. -->
 
-- (regla 1)
-- (regla 2)
+- Escribe todo (textos de la app, comentarios y respuestas) en español neutro: «tú / puedes / mira», nunca voseo ni modismos rioplatenses («vos / podés / mirá / acá»).
+- Nunca leas ni muestres variables de entorno con claves (por ejemplo `GEMINI_API_KEY`) ni archivos de configuración personal como `~/.zshrc`; si una tarea parece necesitar una clave, detente y pregunta.
